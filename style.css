@@ -833,6 +833,10 @@ main .hero button:hover {
     color: black;
 }
 
+.footer-bottom .socials a:hover{
+    color: rgb(156, 206, 68);
+}
+
 @media (max-width: 768px) {
 
     .site-footer{
