@@ -468,18 +468,27 @@ main .hero button:hover {
 }
 
 .about .images {
-    width: 100%;
-    min-height: 40vh;
-
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-
-    overflow: hidden;
-    padding: 1rem 0;
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scroll-behavior: smooth;
 }
 
+.images-scroll-wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+.images-scroll-wrapper img{
+    width: 280px;
+    height: 180px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
 @media (max-width: 768px) {
     .about .para h1 {
         font-size: 1.9rem;
@@ -826,7 +835,7 @@ main .hero button:hover {
 }
 
 .footer-bottom .socials{
-    font-size: 1.2rem;
+    font-size: 1.8rem;
 }
 
 .footer-bottom .socials a{
