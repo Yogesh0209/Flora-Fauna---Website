@@ -900,3 +900,41 @@ html{
         text-align: center;
     }
 }
+
+
+.scroll-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    background-color: rgb(2, 44, 34);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.2rem;
+    text-decoration: none;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+
+    z-index: 999;
+}
+
+body:has(:not(:target)) .scroll-top {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-top:hover {
+    background-color: rgb(190 242 100);
+    color: black;
+    transform: translateY(-4px);
+}
